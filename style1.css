@@ -1,0 +1,287 @@
+
+
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5ff;
+    color: #26324a;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 32px 16px;
+    color: white;
+    background: linear-gradient(120deg, #036685, #08a6c9);
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: clamp(25px, 4vw, 36px);
+}
+
+header p {
+    margin: 0;
+}
+
+/* Main Container */
+
+.container {
+    width: min(1000px, 94%);
+    margin: 28px auto;
+}
+
+/* Tabs */
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tab {
+    flex: 1;
+    background: #dce4ff;
+    color: #036685;
+}
+
+.tab.active {
+    background: #036685;
+    color: white;
+}
+
+/* Card */
+
+.card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #26324a12;
+}
+
+h2 {
+    color: #036685;
+    margin-top: 0;
+}
+
+/* Input Table */
+
+.input-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.input-table th {
+    background: #036685;
+    color: white;
+    padding: 13px;
+}
+
+.input-table td {
+    padding: 10px;
+    border: 1px solid #dbe2ef;
+}
+
+.input-table input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.input-table input:focus {
+    outline: 2px solid #08a6c9;
+}
+
+.delete-btn {
+    background: #ffe5e5;
+    color: #c62828;
+    padding: 8px 12px;
+}
+
+/* Buttons */
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary {
+    background: #e4f8f5;
+    color: #087f70;
+}
+
+.primary {
+    width: 100%;
+    margin-top: 22px;
+    background: #036685;
+    color: white;
+}
+
+button:hover {
+    filter: brightness(0.94);
+}
+
+/* Results */
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.result {
+    padding: 18px;
+    border-radius: 10px;
+    background: #eef0ff;
+    border-left: 4px solid #036685;
+}
+
+.result:nth-child(2) {
+    background: #e6f8f1;
+    border-color: #10a878;
+}
+
+.result:nth-child(3) {
+    background: #fff4df;
+    border-color: #edaa26;
+}
+
+.result:nth-child(4) {
+    background: #e1e6c5;
+    border-color: #08a6c9;
+}
+
+.result span,
+.result strong {
+    display: block;
+}
+
+.result span {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.result strong {
+    font-size: 25px;
+    overflow-wrap: anywhere;
+}
+
+/* Calculation Details */
+
+#details {
+    overflow-x: auto;
+    line-height: 1.8;
+}
+
+#details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+#details th,
+#details td {
+    padding: 10px;
+    border: 1px solid #dbe2ef;
+    text-align: center;
+}
+
+#details th {
+    background: #eef0ff;
+}
+
+/* Error */
+
+#error {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 18px;
+    color: #64748b;
+}
+
+/* Responsive Design */
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 15px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-table {
+        font-size: 12px;
+    }
+
+    .input-table th,
+    .input-table td {
+        padding: 6px;
+    }
+
+    .input-table input {
+        padding: 7px 3px;
+        font-size: 13px;
+    }
+
+    .delete-btn {
+        padding: 6px;
+    }
+}
+
+/* Print */
+
+@media print {
+
+    .tabs,
+    .button-group,
+    #calculateBtn {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+}

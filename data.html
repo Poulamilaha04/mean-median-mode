@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Statistical Measures Simulator</title>
+
+    <link rel="stylesheet" href="style1.css">
+    <script src="script1.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Statistical Measures Simulator</h1>
+    <p>Calculate Mean, Median, Mode and Standard Deviation</p>
+</header>
+
+<main class="container">
+
+    <!-- Tabs -->
+    <div class="tabs">
+
+        <button class="tab active" data-type="ungrouped">
+            Ungrouped Data
+        </button>
+
+        <button class="tab" data-type="grouped">
+            Grouped Data
+        </button>
+
+    </div>
+
+    <!-- Input Section -->
+    <section class="card">
+
+        <h2 id="sectionTitle">Ungrouped Data</h2>
+
+        <p id="instructions">
+            Enter numerical values in the input table.
+        </p>
+
+        <!-- Ungrouped Input -->
+        <div id="ungroupedForm">
+
+            <h3>Ungrouped Data Input Table</h3>
+
+            <table class="input-table">
+
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Data Value (X)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ungroupedBody"></tbody>
+
+            </table>
+
+            <div class="button-group">
+
+                <button id="addUngrouped" class="secondary">
+                    + Add Row
+                </button>
+
+                <button id="sampleUngrouped" class="secondary">
+                    Load Sample
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Grouped Input -->
+        <div id="groupedForm" hidden>
+
+            <h3>Grouped Data Input Table</h3>
+
+            <table class="input-table">
+
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Lower Limit</th>
+                        <th>Upper Limit</th>
+                        <th>Frequency (f)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="groupedBody"></tbody>
+
+            </table>
+
+            <div class="button-group">
+
+                <button id="addGrouped" class="secondary">
+                    + Add Row
+                </button>
+
+                <button id="sampleGrouped" class="secondary">
+                    Load Sample
+                </button>
+
+            </div>
+
+        </div>
+
+        <button id="calculateBtn" class="primary">
+            Calculate Statistics
+        </button>
+
+        <p id="error" role="alert"></p>
+
+    </section>
+
+
+    <!-- Results Section -->
+    <section class="card" id="results" hidden>
+
+        <h2>Statistical Results</h2>
+
+        <div class="results-grid">
+
+            <div class="result">
+                <span>Mean</span>
+                <strong id="mean">—</strong>
+            </div>
+
+            <div class="result">
+                <span>Median</span>
+                <strong id="median">—</strong>
+            </div>
+
+            <div class="result">
+                <span>Mode</span>
+                <strong id="mode">—</strong>
+            </div>
+
+            <div class="result">
+                <span>Population SD</span>
+                <strong id="sd">—</strong>
+            </div>
+
+        </div>
+
+        <h3>Calculation Details</h3>
+
+        <div id="details"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Statistical Measures Simulator </p>
+</footer>
+
+</body>
+</html>
