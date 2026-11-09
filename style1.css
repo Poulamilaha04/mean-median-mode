@@ -1,6 +1,4 @@
-
-
- * {
+* {
     box-sizing: border-box;
 }
 
@@ -282,6 +280,94 @@ footer {
 
     .card {
         box-shadow: none;
+    }
+
+}
+
+/* ==================================
+   RESEARCH PAPER SECTION
+================================== */
+
+.paper-card {
+    text-align: center;
+    padding: 35px 25px;
+    border-top: 5px solid #036685;
+}
+
+.paper-card h2 {
+    color: #036685;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.paper-card p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+/* Research Paper Button */
+
+.paper-btn {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: linear-gradient(
+        120deg,
+        #036685,
+        #08a6c9
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 15px #03668525;
+}
+
+.paper-btn:hover {
+    background: #024c63;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px #03668540;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .paper-card {
+        padding: 25px 15px;
+    }
+
+    .paper-card h2 {
+        font-size: 24px;
+    }
+
+    .paper-btn {
+        width: 100%;
+        padding: 14px 12px;
+        font-size: 14px;
+    }
+
+}
+
+/* Print */
+
+@media print {
+
+    .paper-card {
+        display: none;
     }
 
 }
