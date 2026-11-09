@@ -1,6 +1,3 @@
-
-
-
 const tabs = document.querySelectorAll(".tab");
 
 const ungroupedBody = document.getElementById("ungroupedBody");
@@ -616,7 +613,31 @@ function calculateGrouped() {
         </p>
 
     `;
+  
 
     showResults(mean, median, mode, sd, details);
+      /* ==================================
+   RESEARCH PAPER PDF FUNCTIONALITY
+================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const pdfLinks = document.querySelectorAll(
+        ".paper-btn"
+    );
+
+    pdfLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            console.log(
+                "Research Paper PDF link clicked."
+            );
+
+        });
+
+    });
+
+});
 
 }
